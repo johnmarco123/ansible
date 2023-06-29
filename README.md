@@ -1,4 +1,7 @@
-# Currently the following work flawlessly
+# Quick setup
+    Quickly setup on any pc, node, npm and zsh currently are not working.
+    
+### Currently the following work flawlessly
     ssh
     git-setup
     core-setup
@@ -7,7 +10,7 @@
     dotfiles
     productivity-tools
 
-# Currently the following DO NOT work okay:
+### Currently the following DO NOT work okay:
     node-setup
     npm-packages
     zsh-setup
