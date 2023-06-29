@@ -4,23 +4,29 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
-  - name: Update Apt
-    become: true
-    apt:
-      force_apt_get: true
+    - name: Update Apt
+      become: true
+      apt:
+        force_apt_get: true
       update_cache: true
       state: present
-    tags:
-      - install
-      - core
+      tags:
+        - install
+    - core
   tasks:
     - ansible.builtin.include_tasks: tasks/ssh.yml
     - ansible.builtin.include_tasks: tasks/git-setup.yml
     - ansible.builtin.include_tasks: tasks/core-setup.yml
+      
+
+      # Currently cannot find a way to upgrade node, cant figure out n and
+      # nvm
       #- ansible.builtin.include_tasks: tasks/node-setup.yml
       #- ansible.builtin.include_tasks: tasks/npm-packages.yml
       #- ansible.builtin.include_tasks: tasks/zsh-setup.yml
-      #- ansible.builtin.include_tasks: tasks/python-setup.yml
+
+
+    - ansible.builtin.include_tasks: tasks/python-setup.yml
     - ansible.builtin.include_tasks: tasks/nvim-setup.yml
     - ansible.builtin.include_tasks: tasks/dotfiles.yml
     - ansible.builtin.include_tasks: tasks/productivity-tools.yml
