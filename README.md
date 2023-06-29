@@ -1,5 +1,5 @@
 # Quick setup
-    Quickly setup on any pc, node, npm and zsh currently are not working.
+    curl ansible-run
     
 ### Currently the following work flawlessly
     ssh
