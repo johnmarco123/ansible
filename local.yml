@@ -47,14 +47,6 @@
       #   - install
       #   - node
 
-    # - name: Task 3/8
-    #   import_tasks: tasks/zsh-setup.yml
-    #   tags: 
-    #     - zsh
-    #     - install
-    #     - productivity
-    #     - dotfiles
-
     - name: Task 4/7
       import_tasks: tasks/python-setup.yml
       tags: 

@@ -10,3 +10,7 @@ sudo ansible-galaxy collection install community.general
 git clone https://github.com/johnmarco123/ansible.git
 cd ansible
 ansible-playbook --ask-vault-pass -K local.yml
+
+## Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
