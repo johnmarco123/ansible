@@ -1,5 +1,5 @@
 # Quick setup
-#### clone repo and copy paste this:
+### clone repo and copy paste this:
     ansible-playbook -K --ask-vault-pass local.yml
     
 ### Currently the following work flawlessly
