@@ -14,69 +14,69 @@
       - install
       - core
   tasks:
-    - name: Task 1/8
-      ansible.builtin.include_tasks: tasks/ssh.yml
+    - name: Task 1/7
+      import_tasks: tasks/ssh.yml
       tags: 
         - install
         - ssh
         - dotfiles
 
-    - name: Task 2/8
-      ansible.builtin.include_tasks: tasks/git-setup.yml
+    - name: Task 2/7
+      import_tasks: tasks/git-setup.yml
       tags:
         - install
         - git
 
-    - name: Task 3/8
-      ansible.builtin.include_tasks: tasks/core-setup.yml
+    - name: Task 3/7
+      import_tasks: tasks/core-setup.yml
       tags:
         - install
         - neovim
         - core
-
+    
       # Currently cannot find a way to upgrade node, cant figure out n and
       # nvm
       #name: Install node
-      #- ansible.builtin.include_tasks: tasks/node-setup.yml
+      #- import_tasks: tasks/node-setup.yml
       # tags:
       #   - install
       #   - node
       #name: Install npm
-      #- ansible.builtin.include_tasks: tasks/npm-packages.yml
+      #- import_tasks: tasks/npm-packages.yml
       # tags:
       #   - install
       #   - node
 
-    - name: Task 4/8
-      ansible.builtin.include_tasks: tasks/zsh-setup.yml
-      tags: 
-        - install
-        - productivity
-        - dotfiles
-        - zsh
+    # - name: Task 3/8
+    #   import_tasks: tasks/zsh-setup.yml
+    #   tags: 
+    #     - zsh
+    #     - install
+    #     - productivity
+    #     - dotfiles
 
-    - name: Task 5/8
-      ansible.builtin.include_tasks: tasks/python-setup.yml
+    - name: Task 4/7
+      import_tasks: tasks/python-setup.yml
       tags: 
         - install
         - python
-
-    - name: Task 6/8
-      ansible.builtin.include_tasks: tasks/nvim-setup.yml
+    
+    - name: Task 5/7
+      import_tasks: tasks/nvim-setup.yml
       tags:
         - install
         - neovim
         - nvim
-
-    - name: Task 7/8
-      ansible.builtin.include_tasks: tasks/dotfiles.yml
+    
+    - name: Task 6/7
+      import_tasks: tasks/dotfiles.yml
       tags:
         - install
         - dotfiles
         - stow
-
-    - name: Task 8/8
-      ansible.builtin.include_tasks: tasks/productivity-tools.yml
+    
+    - name: Task 7/7
+      import_tasks: tasks/productivity-tools.yml
       tags: 
         - install
         - productivity

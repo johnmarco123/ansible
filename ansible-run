@@ -7,4 +7,6 @@ sudo apt-get install -y curl git software-properties-common ansible
 sudo ansible-galaxy collection install community.general
 
 ## Install all the things
+git clone https://github.com/johnmarco123/ansible.git
+cd ansible
 ansible-playbook --ask-vault-pass -K local.yml
