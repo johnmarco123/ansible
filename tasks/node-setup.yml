@@ -32,15 +32,15 @@
   - npm-path
 
 - name: Install N
-  npm:
+  community.general.npm:
     name: n
-    global: yes
-  tags:
-    - install
-    - node
+    global: true
+      #tags:
+      #  - install
+      #  - node
 
 - name: Install correct version of Node
-  shell: n 14
+  shell: n 18
   tags:
     - install
     - node

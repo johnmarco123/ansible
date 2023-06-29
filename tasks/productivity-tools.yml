@@ -1,7 +1,7 @@
-- name: Install packages
+- name: Install productivity packages
   become: true
   apt:
-    name: [ "tmux", "wireshark", "fzf",  "xclip", "tldr", "ripgrep" ]
+    name: [ "tmux", "wireshark", "fzf",  "xclip", "tldr", "ripgrep", "gh" ]
   tags:
     - install
     - productivity
