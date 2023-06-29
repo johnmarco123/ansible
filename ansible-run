@@ -6,13 +6,13 @@ sudo apt-get update -y
 sudo apt-get install -y curl git software-properties-common ansible
 sudo ansible-galaxy collection install community.general
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Install all the things
 git clone https://github.com/johnmarco123/ansible.git
 cd ansible
-# ansible-playbook --ask-vault-pass -K local.yml
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ansible-playbook --ask-vault-pass -K local.yml
 
 ## Install nvm and correct node version -- untested but should work...
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
