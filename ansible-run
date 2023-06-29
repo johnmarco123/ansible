@@ -1,20 +1,22 @@
 #!/usr/bin/env bash
 
-## Install ansible
+# Install ansible
 sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update -y
 sudo apt-get install -y curl git software-properties-common ansible
 sudo ansible-galaxy collection install community.general
 
-## Install all the things
+# Install all the things
 git clone https://github.com/johnmarco123/ansible.git
 cd ansible
-ansible-playbook --ask-vault-pass -K local.yml
+# ansible-playbook --ask-vault-pass -K local.yml
 
-## Install oh-my-zsh
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Install nvm and correct node version -- untested but should work...
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
+source ~/.zshrc
 nvm install 20.0
 nvm use 20.0
+source ~/.zshrc
