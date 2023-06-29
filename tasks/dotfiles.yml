@@ -13,6 +13,9 @@
     update: yes
     accept_hostkey: yes
     version: master
+  become: yes
+  become_method: su
+  become_user: john
   tags:
     - install
     - dotfiles

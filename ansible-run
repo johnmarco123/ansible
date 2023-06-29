@@ -7,4 +7,4 @@ sudo apt-get install -y curl git software-properties-common ansible
 sudo ansible-galaxy collection install community.general
 
 ## pull ansible
-# sudo ansible-pull -U https://github.com/johnmarco123/ansible.git
+# ansible-pull -U https://github.com/johnmarco123/ansible.git

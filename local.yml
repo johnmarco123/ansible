@@ -16,12 +16,11 @@
   tasks:
     - ansible.builtin.include_tasks: tasks/ssh.yml
     - ansible.builtin.include_tasks: tasks/git-setup.yml
+    - ansible.builtin.include_tasks: tasks/core-setup.yml
       #- ansible.builtin.include_tasks: tasks/node-setup.yml
       #- ansible.builtin.include_tasks: tasks/npm-packages.yml
       #- ansible.builtin.include_tasks: tasks/zsh-setup.yml
       #- ansible.builtin.include_tasks: tasks/python-setup.yml
-      #- ansible.builtin.include_tasks: tasks/nvim-setup.yml
-      #- ansible.builtin.include_tasks: tasks/dotfiles.yml
-      #- ansible.builtin.include_tasks: tasks/productivity-tools.yml
-      #- ansible.builtin.include_tasks: tasks/lsp.yml
-
+    - ansible.builtin.include_tasks: tasks/nvim-setup.yml
+    - ansible.builtin.include_tasks: tasks/dotfiles.yml
+    - ansible.builtin.include_tasks: tasks/productivity-tools.yml
