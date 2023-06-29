@@ -14,14 +14,14 @@
       - install
       - core
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/git-setup.yml
-    - include: tasks/node-setup.yml
-    - include: tasks/npm-packages.yml
-    - include: tasks/zsh-setup.yml
-    - include: tasks/python-setup.yml
-    - include: tasks/nvim-setup.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/productivity-tools.yml
-    - include: tasks/lsp.yml
+    - ansible.builtin.include_tasks: tasks/ssh.yml
+    - ansible.builtin.include_tasks: tasks/git-setup.yml
+      #- ansible.builtin.include_tasks: tasks/node-setup.yml
+      #- ansible.builtin.include_tasks: tasks/npm-packages.yml
+      #- ansible.builtin.include_tasks: tasks/zsh-setup.yml
+      #- ansible.builtin.include_tasks: tasks/python-setup.yml
+      #- ansible.builtin.include_tasks: tasks/nvim-setup.yml
+      #- ansible.builtin.include_tasks: tasks/dotfiles.yml
+      #- ansible.builtin.include_tasks: tasks/productivity-tools.yml
+      #- ansible.builtin.include_tasks: tasks/lsp.yml
 
