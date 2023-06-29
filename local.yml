@@ -14,20 +14,20 @@
       - install
       - core
   tasks:
-    - name: Task 1/7
+    - name: Task 1/8
       import_tasks: tasks/ssh.yml
       tags: 
         - install
         - ssh
         - dotfiles
 
-    - name: Task 2/7
+    - name: Task 2/8
       import_tasks: tasks/git-setup.yml
       tags:
         - install
         - git
 
-    - name: Task 3/7
+    - name: Task 3/8
       import_tasks: tasks/core-setup.yml
       tags:
         - install
@@ -47,28 +47,34 @@
       #   - install
       #   - node
 
-    - name: Task 4/7
+    - name: Task 4/8
       import_tasks: tasks/python-setup.yml
       tags: 
         - install
         - python
     
-    - name: Task 5/7
+    - name: Task 5/8
       import_tasks: tasks/nvim-setup.yml
       tags:
         - install
         - neovim
         - nvim
     
-    - name: Task 6/7
+    - name: Task 6/8
       import_tasks: tasks/dotfiles.yml
       tags:
         - install
         - dotfiles
         - stow
     
-    - name: Task 7/7
+    - name: Task 7/8
       import_tasks: tasks/productivity-tools.yml
       tags: 
         - install
         - productivity
+
+    - name: Task 8/8
+      import_tasks: tasks/lsp.yml
+      tags: 
+        - install
+        - lsp

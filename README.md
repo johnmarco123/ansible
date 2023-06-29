@@ -10,9 +10,8 @@
     nvim-setup <--- make sure you go to packer, source it and PackerSync
     dotfiles
     productivity-tools
-
+    lsp-setup
 
 ### Currently the following DO NOT work okay:
     node-setup
     npm-packages
-    zsh-setup
