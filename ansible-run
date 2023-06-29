@@ -16,6 +16,7 @@ ansible-playbook --ask-vault-pass -K local.yml
 
 ## Install nvm and correct node version -- untested but should work...
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
+unset npm_config_prefix
 source ~/.zshrc
 nvm install 20.0
 nvm use 20.0
