@@ -20,5 +20,9 @@ unset npm_config_prefix
 nvm install 20.0
 nvm use 20.0
 
+# Remove the ansible directory
+cd ..
+rm -rf ansible
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
