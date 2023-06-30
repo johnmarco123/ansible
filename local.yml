@@ -33,19 +33,6 @@
         - install
         - neovim
         - core
-    
-      # Currently cannot find a way to upgrade node, cant figure out n and
-      # nvm
-      #name: Install node
-      #- import_tasks: tasks/node-setup.yml
-      # tags:
-      #   - install
-      #   - node
-      #name: Install npm
-      #- import_tasks: tasks/npm-packages.yml
-      # tags:
-      #   - install
-      #   - node
 
     - name: Task 4/8
       import_tasks: tasks/python-setup.yml
