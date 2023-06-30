@@ -3,17 +3,17 @@
     ansible-playbook -K --ask-vault-pass local.yml
     
 ### Currently the following work flawlessly
-    ssh
-    git-setup
-    core-setup
-    python-setup
-    nvim-setup <--- make sure you go to packer, source it and PackerSync
-    dotfiles
-    productivity-tools
-    lsp-setup
-    node
-    nvm
+ssh
+git-setup
+core-setup
+python-setup
+nvim-setup <--- make sure you go to packer, source it and PackerSync
+dotfiles
+productivity-tools
+lsp-setup
+node
+nvm
     
 ## Building dockers
-docker run --rm -it nvim-computer bash <- creates the environment basically
-./build-dockers
+    docker run --rm -it nvim-computer bash <- creates the environment basically
+    ./build-dockers
