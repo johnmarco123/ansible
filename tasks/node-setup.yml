@@ -14,11 +14,3 @@
 
 - name: npmjs global settings export path in case I don't have dotfiles installed
   shell: export PATH=~/.local/.npm-global/bin:$PATH
-
-- name: Install n
-  community.general.npm:
-    name: n
-    global: yes
-
-- name: Install correct version of Node
-  shell: n 18
