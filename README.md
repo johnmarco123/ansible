@@ -11,7 +11,5 @@
     dotfiles
     productivity-tools
     lsp-setup
-
-### Currently the following DO NOT work okay:
-    node-setup
-    npm-packages
+    node
+    nvm
