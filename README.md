@@ -13,3 +13,7 @@
     lsp-setup
     node
     nvm
+    
+## Building dockers
+docker run --rm -it nvim-computer bash <- creates the environment basically
+./build-dockers
