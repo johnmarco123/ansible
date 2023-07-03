@@ -14,67 +14,73 @@
       - install
       - core
   tasks:
-    - name: Task 1/10
+    - name: Task 1/11
       import_tasks: tasks/ssh.yml
       tags: 
         - install
         - ssh
         - dotfiles
 
-    - name: Task 2/10
+    - name: Task 2/11
       import_tasks: tasks/git-setup.yml
       tags:
         - install
         - git
 
-    - name: Task 3/10
+    - name: Task 3/11
       import_tasks: tasks/core-setup.yml
       tags:
         - install
         - neovim
         - core
 
-    - name: Task 4/10
+    - name: Task 4/11
       import_tasks: tasks/python-setup.yml
       tags: 
         - install
         - python
     
-    - name: Task 5/10
+    - name: Task 5/11
       import_tasks: tasks/nvim-setup.yml
       tags:
         - install
         - neovim
         - nvim
 
-    - name: Task 6/10
+    - name: Task 6/11
       import_tasks: tasks/node-setup.yml
       tags:
         - install
         - node
 
-    - name: Task 7/10
+    - name: Task 7/11
       import_tasks: tasks/npm-packages.yml
       tags:
         - install
         - node
         - npm
     
-    - name: Task 8/10
+    - name: Task 8/11
       import_tasks: tasks/dotfiles.yml
       tags:
         - install
         - dotfiles
         - stow
     
-    - name: Task 9/10
+    - name: Task 9/11
       import_tasks: tasks/productivity-tools.yml
       tags: 
         - install
         - productivity
 
-    - name: Task 10/10
+    - name: Task 10/20
       import_tasks: tasks/lsp.yml
       tags: 
         - install
         - lsp
+
+    - name: Task 11/11
+      import_tasks: tasks/projects.yml
+      tags: 
+        - install
+        - projects
