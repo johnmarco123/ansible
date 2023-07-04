@@ -84,9 +84,3 @@
       tags: 
         - install
         - projects
-
-    - name: Starting projects tasks
-      import_tasks: tasks/projects.yml
-      tags: 
-        - install
-        - projects
