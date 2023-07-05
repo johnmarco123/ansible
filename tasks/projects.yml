@@ -1,7 +1,7 @@
 - name: Downloading projects
   ansible.builtin.git:
     repo: 'git@github.com:johnmarco123/final_project_drawing_app.git'
-    dest: "{{ lookup('env', 'HOME') }}/projects/drawing-app"
+    dest: "{{ lookup('env', 'HOME') }}/personal/drawing-app"
     recursive: yes
     update: yes
     accept_hostkey: yes
