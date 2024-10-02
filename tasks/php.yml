@@ -1,0 +1,17 @@
+- name: Productivity tools (tmux, i3, fzf)
+  become: true
+  ansible.builtin.apt_repository:
+    repo: ppa:ondrej/php
+    state: present
+    
+- name: Installing php, php-fpm, php-memcache and memcached
+  become: true
+  apt:
+    name: ["php7.4", "php7.4-fpm", "php7.4-memcache", "memcached"]
+
+- name: Installing nginx
+  become: true
+  apt:
+    name: ["nginx"]
+
+#TODO FIX CONFIG FILES FOR THESE SO THEY WORK TOGETHER

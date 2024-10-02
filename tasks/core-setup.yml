@@ -1,4 +1,4 @@
-- name: Install system packages (curl)
+- name: Install system packages (curl, fzf, xclip, ripgrep)
   become: true
   apt:
-    name: ["curl"]
+    name: ["curl", "fzf", "xclip", "ripgrep"]

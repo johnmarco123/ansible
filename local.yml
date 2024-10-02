@@ -4,6 +4,7 @@
       import_tasks: tasks/core-setup.yml
       tags: 
         - core
+        - core-setup
 
     - name: Starting node tasks
       import_tasks: tasks/node.yml
@@ -12,3 +13,15 @@
         - node
         - js
 
+    - name: Starting php tasks
+      import_tasks: tasks/php.yml
+      tags: 
+        - php
+        - nginx
+
+    - name: Starting productivity-tools tasks
+      import_tasks: tasks/productivity-tools.yml
+      tags: 
+        - fast
+        - productivity-tools
+        - prod
