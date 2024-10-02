@@ -1,0 +1,10 @@
+- name: Full ubuntu setup :)
+- hosts: localhost
+  tasks:
+    - name: Starting ssh tasks
+      import_tasks: tasks/ssh.yml
+      tags: 
+        - install
+        - ssh
+        - dotfiles
+

@@ -1,4 +1,12 @@
-  FROM ubuntu:22.04
-  RUN apt-get update -y
-  RUN apt-get upgrade -y
-  RUN apt-get install -y curl
+FROM ubuntu:22.04
+ARG TAGS
+WORKDIR /usr/local/bin
+RUN apt update -y \
+&& apt upgrade -y \
+&& apt install -y software-properties-common \
+&& add-apt-repository --yes --update ppa:ansible/ansible \
+&& apt install -y ansible
+COPY . .
+CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]
+#&& #apt-get install -y curl git software-properties-common ansible && apt-get ansible-galaxy collection install community.general
+
