@@ -7,6 +7,4 @@ RUN apt update -y \
 && add-apt-repository --yes --update ppa:ansible/ansible \
 && apt install -y ansible
 COPY . .
-CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]
-#&& #apt-get install -y curl git software-properties-common ansible && apt-get ansible-galaxy collection install community.general
-
+#CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]

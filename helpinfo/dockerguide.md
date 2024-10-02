@@ -44,3 +44,7 @@ docker build -t image_name .
 
 ## running a existing image
 docker run -it --name=ubuntu_container_name test-ubuntu /bin/bash
+
+## delete all containers
+docker rm -v -f $(docker ps -qa)
+

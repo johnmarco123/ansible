@@ -1,10 +1,14 @@
-- name: Full ubuntu setup :)
 - hosts: localhost
   tasks:
-    - name: Starting ssh tasks
-      import_tasks: tasks/ssh.yml
+    - name: Starting core-setup tasks
+      import_tasks: tasks/core-setup.yml
+      tags: 
+        - core
+
+    - name: Starting node tasks
+      import_tasks: tasks/node.yml
       tags: 
         - install
-        - ssh
-        - dotfiles
+        - node
+        - js
 
