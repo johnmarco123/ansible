@@ -1,0 +1,11 @@
+- name: Remove dotfiles2
+  shell: rm -rf ~/dotfiles2
+
+- name: Clone personal config files
+  ansible.builtin.git:
+    repo: 'https://github.com/johnmarco123/dotfiles2.git'
+    dest: "~/dotfiles2"
+
+- name: Move the config files to the correct locations using the configure script
+  shell: "cd ~/dotfiles2 && bash ./configure"
+

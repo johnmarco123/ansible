@@ -6,4 +6,10 @@
 - name: Install nvm
   become: true
   ansible.builtin.shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-    
+
+- name: Allow nvm to be run without terminal reboot
+  become: true
+  shell: |
+    [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
+    [ -s "$HOME/.nvm/bash_completion" ] && . "$HOME/.nvm/bash_completion"
+  #ansible.builtin.shell: [ -s "~/.nvim/nvm.sh" ] && ."$nvm_dir/nvm.sh" [ -s "~/.nvim/bash_completion" ] && ."~/.nvim/bash_completion"

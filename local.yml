@@ -25,3 +25,17 @@
         - fast
         - productivity-tools
         - prod
+
+    - name: Starting nvim tasks
+      import_tasks: tasks/nvim.yml
+      tags: 
+        - nvim
+        - neovim
+        - vim
+
+    - name: Starting config tasks
+      import_tasks: tasks/config.yml
+      tags: 
+        - config
+        - configurations
+

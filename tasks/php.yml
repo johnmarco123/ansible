@@ -1,4 +1,4 @@
-- name: Productivity tools (tmux, i3, fzf)
+- name: Grabbing ondrej/php repo
   become: true
   ansible.builtin.apt_repository:
     repo: ppa:ondrej/php
