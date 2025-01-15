@@ -6,4 +6,4 @@
 - name: Install productivity packages 2 (peek, shutter)
   become: true
   apt:
-    name: ["peek", "shutter"]
+    name: ["peek", "shutter", "xbindkeys", "playerctl"]
